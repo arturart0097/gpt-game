@@ -4,7 +4,7 @@ import { SocialLinks } from "../UI/SocialLinks";
 
 import "./style.css";
 import { socialLinks } from "@/entities/socialLinks";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const navidate = useNavigate()
@@ -17,7 +17,7 @@ export const Header = () => {
       </div>
       <div className="header-menu">
         <ul>
-          <li>DUEL Token</li>
+          <Link to={"/origin"}><li>DUEL Token</li></Link>
           <li>Team</li>
           <li>Tokenomics</li>
           <li>
