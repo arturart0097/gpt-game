@@ -1,0 +1,24 @@
+.heros_wrapper {
+  text-align: center;
+}
+
+.heros_wrapper p {
+  color: #fff;
+  text-align: center;
+  font-family: Unbounded;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.48px;
+}
+
+.heros_wrapper span {
+  color: var(--CTA, #ba83ff);
+  font-family: Unbounded;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+}

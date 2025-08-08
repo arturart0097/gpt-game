@@ -1,0 +1,33 @@
+.meetTeam_wrapper {
+  height: 500px;
+  text-align: center;
+}
+
+.teams {
+  display: flex;
+  gap: 134px;
+  justify-content: center;
+}
+
+.person {
+  text-align: center;
+}
+
+.person > img {
+  width: 212px;
+}
+
+.person p:last-of-type {
+  color: #fff;
+  text-align: center;
+  font-family: Unbounded;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.72px;
+}
+
+.person > p {
+  margin-bottom: 0px;
+}

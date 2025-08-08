@@ -1,0 +1,76 @@
+footer {
+  padding: 109px 134px 108.409px 134px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo > h1 {
+  color: #fff;
+  font-family: Syne;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -2.787px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social_logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.social_logo > span {
+  color: #fff;
+  font-family: Unbounded;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.crypto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.crypto div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.crypto div > span {
+  color: #fff;
+  font-family: Unbounded;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.footer-menu > ul {
+  list-style-type: none;
+  color: #fff;
+  font-family: Unbounded;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

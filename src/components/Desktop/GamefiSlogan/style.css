@@ -1,0 +1,110 @@
+.gamefiSlogan_wrapper {
+  margin-top: 180px;
+}
+
+.gamefiSlogan_experts_text {
+  z-index: 1;
+}
+.experts {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.gamefiSlogan_wrapper-text {
+  text-align: center;
+}
+
+.gamefiSlogan_content {
+  height: 695px;
+  position: relative;
+  margin-top: -50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.gamefiSlogan_content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../../../assets/bg/gamefiSlogan.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.gamefiSlogan_content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.activePlayer {
+  background-image: url("../../../assets/images/activePlayers.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 475px;
+  height: 475px;
+}
+
+.registeredUsers {
+  background-image: url("../../../assets/images/registeredUsers.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 475px;
+  height: 475px;
+}
+
+.registeredUsers-years {
+  position: absolute;
+  width: 186px;
+  height: 180px;
+  top: -70px;
+  right: -70px;
+}
+
+.activePlayer > h2,
+.registeredUsers-text > h2 {
+  color: #fff;
+  text-align: center;
+  font-family: Unbounded;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -3px;
+}
+
+.activePlayer-text,
+.registeredUsers {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+
+.activePlayer-text > h2,
+.registeredUsers > h2 {
+  margin-bottom: 16px;
+}
+
+.activePlayer-text > h2,
+.activePlayer-text > span,
+.registeredUsers-text > h2 {
+  margin: 0;
+}
+
+.activePlayer-text > span {
+  margin-bottom: 20px;
+}
+
+.registeredUsers-text {
+    margin-bottom: 20px;
+}

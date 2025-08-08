@@ -1,0 +1,50 @@
+header {
+  width: 95vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header h1 {
+  color: #fff;
+  font-family: Syne;
+  font-size: 27.632px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.658px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+}
+
+.header-menu ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+
+.header-menu ul li {
+  color: #fff;
+  font-family: Unbounded;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.header-menu span {
+  margin-left: 8px;
+}

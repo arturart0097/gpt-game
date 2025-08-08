@@ -1,0 +1,22 @@
+.bunner-wrapper {
+  background-image: url("../../../assets/bg/bg1.png");
+  background-size: 100%;
+  height: 709px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bunner-text {
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+
+.bunner-text > h1 {
+  margin-bottom: 16px;
+}
+
+.bunner-text > h1,
+.bunner-text > p {
+  margin: 0;
+}

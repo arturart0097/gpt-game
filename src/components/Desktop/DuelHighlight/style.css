@@ -1,0 +1,80 @@
+.duel-wrapper {
+  height: 1000px;
+}
+
+.duel-icon1 {
+  position: relative;
+  left: 15%;
+}
+
+.duel-icon2 {
+  position: absolute;
+  right: 15%;
+}
+
+.duel-icon3 {
+  position: relative;
+  top: 30vh;
+}
+
+.position-icon {
+  width: 100%;
+  position: relative;
+  top: 30vh;
+}
+
+.duel-icon4 {
+  position: absolute;
+  bottom: 30px;
+  right: 15%;
+}
+
+.duel-title {
+  margin-top: 100px;
+}
+
+.duel-text {
+  position: relative;
+  bottom: 60px;
+  text-align: center;
+}
+
+.duel-text > h2 {
+  margin-bottom: 20px;
+}
+
+.duel-text > h2,
+.duel-text > span {
+  margin: 10px;
+}
+
+.duel-bet-win {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.button-wrapper > button {
+  display: inline-flex;
+  padding: 20px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 30px;
+  background: #fff;
+  color: #000;
+text-align: center;
+font-family: Unbounded;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.6px;
+}

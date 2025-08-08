@@ -1,0 +1,65 @@
+.factions-text {
+  text-align: center;
+}
+
+.factions-text span {
+  color: var(--CTA, #ba83ff);
+  text-align: center;
+  font-family: Unbounded;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 108.571%; /* 54.286px */
+  letter-spacing: -1.5px;
+}
+
+.faction-content {
+  margin-top: 200px;
+  background-image: url("../../../assets/bg/factionsBG.png");
+  height: 624px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+.faction-content h2 {
+  margin-bottom: 0px;
+}
+
+.faction-content span {
+  color: var(--CTA, #ba83ff);
+  font-family: Unbounded;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+}
+
+.faction-content p {
+  color: #fff;
+  text-align: center;
+  font-family: Unbounded;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.48px;
+}
+
+.facts {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.facts img {
+    width: 100%;
+}
+
+.fact-link {
+  width: 30%;
+}

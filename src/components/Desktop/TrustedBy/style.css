@@ -1,0 +1,16 @@
+.trustedBy_wrapper {
+    height: 800px;
+    background-image: url("../../../assets/bg/trustedByBG.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons_wrapper {
+    display: flex;
+    gap: 20px;
+}

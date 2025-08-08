@@ -1,0 +1,133 @@
+.content {
+  display: flex;
+  padding: 30px;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.bg {
+  background-image: url("../../assets/bg/heroBg.png");
+  background-position: center;
+  background-size: 50%;
+}
+
+.image-content {
+  width: 30%;
+}
+
+.image-content > img {
+  width: 100%;
+}
+
+.content-text {
+  width: 70%;
+}
+
+.content-text > h1 {
+  color: #fff;
+  font-family: Tachyon;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px; /* 120% */
+}
+
+.content h3 {
+  color: #fff;
+  font-family: Tachyon;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 24px */
+}
+
+.content-text span {
+  color: #fff;
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: -0.54px;
+  align-self: stretch;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0px 0px 35px;
+}
+
+.content-list {
+  width: 28vw;
+  min-height: 465px;
+  border-radius: 40px;
+  border: 1px solid #fbffff;
+  background: #000;
+  box-shadow: 0 776px 217px 0 rgba(0, 0, 0, 0),
+    0 497px 199px 0 rgba(0, 0, 0, 0.01), 0 279px 168px 0 rgba(0, 0, 0, 0.05),
+    0 124px 124px 0 rgba(0, 0, 0, 0.09), 0 31px 68px 0 rgba(0, 0, 0, 0.1);
+}
+
+.content-list ul {
+  list-style-type: none;
+  color: #fff;
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 21.6px */
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.button > span {
+  text-align: center;
+  font-family: Tachyon;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px; /* 300% */
+  text-transform: capitalize;
+  background: var(
+    --gradient,
+    linear-gradient(60deg, #f094fa 13.4%, #f5576e 86.6%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  user-select: none;
+}
+
+.select {
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 21.6px */
+  background: var(
+    --Gradient-Prism,
+    linear-gradient(60deg, #f094fa 13.4%, #f5576e 86.6%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

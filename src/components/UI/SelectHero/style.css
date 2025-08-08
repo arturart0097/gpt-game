@@ -1,0 +1,51 @@
+.selectHero_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.selectHero_wrapper > button {
+  display: flex;
+  padding: 20px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 30px;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  font-family: Unbounded;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.6px;
+}
+
+.heros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  gap: 25px;
+}
+
+.hero {
+  width: 100%;
+  height: 410px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 10px;
+  border-radius: 16px; /* опціонально, для краси */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* опціонально */
+}
+
+.hero-link {
+  display: block;
+  width: 25%;
+}
