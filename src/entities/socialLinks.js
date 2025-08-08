@@ -1,7 +1,7 @@
 import Tg from "@/assets/icons/tg.svg";
 import Tg2 from "@/assets/icons/tg2.svg";
 import X from "@/assets/icons/x.svg";
-import YouTubeIcon from "@/assets/icons/youtube.svg";
+import YouTubeIcon from "@/assets/icons/youTube.svg";
 import Discord from "@/assets/icons/discord.svg";
 
 export const socialLinks = [
