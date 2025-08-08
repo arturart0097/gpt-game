@@ -7,8 +7,8 @@
 
 .bg {
   background-image: url("../../assets/bg/heroBg.png");
-  background-position: center;
-  background-size: 50%;
+  background-position: bottom;
+  background-size: 30%;
 }
 
 .image-content {
