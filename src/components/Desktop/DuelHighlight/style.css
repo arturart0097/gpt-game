@@ -1,5 +1,8 @@
 .duel-wrapper {
   height: 1000px;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
 }
 
 .duel-icon1 {
@@ -71,10 +74,135 @@
   border-radius: 30px;
   background: #fff;
   color: #000;
-text-align: center;
-font-family: Unbounded;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-letter-spacing: -0.6px;
+  text-align: center;
+  font-family: Unbounded;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.6px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Медіа-запити для мобільних пристроїв */
+@media (max-width: 1200px) {
+  .duel-wrapper {
+    height: 900px;
+  }
+  
+  .duel-icon1 {
+    left: 10%;
+  }
+  
+  .duel-icon2 {
+    right: 10%;
+  }
+  
+  .duel-icon4 {
+    right: 10%;
+  }
+}
+
+@media (max-width: 992px) {
+  .duel-wrapper {
+    height: 800px;
+  }
+  
+  .duel-title {
+    margin-top: 80px;
+  }
+  
+  .duel-text {
+    bottom: 40px;
+  }
+  
+  .button-wrapper {
+    margin-top: 40px;
+  }
+  
+  .button-wrapper > button {
+    padding: 18px 26px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .duel-wrapper {
+    height: 700px;
+  }
+  
+  .duel-icon1 {
+    left: 5%;
+  }
+  
+  .duel-icon2 {
+    right: 5%;
+  }
+  
+  .duel-icon4 {
+    right: 5%;
+  }
+  
+  .duel-title {
+    margin-top: 60px;
+  }
+  
+  .duel-text {
+    bottom: 30px;
+  }
+  
+  .duel-text > h2,
+  .duel-text > span {
+    margin: 8px;
+  }
+  
+  .button-wrapper {
+    margin-top: 30px;
+  }
+  
+  .button-wrapper > button {
+    padding: 16px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .duel-wrapper {
+    height: 600px;
+  }
+  
+  .duel-icon1 {
+    left: 2%;
+  }
+  
+  .duel-icon2 {
+    right: 2%;
+  }
+  
+  .duel-icon4 {
+    right: 2%;
+  }
+  
+  .duel-title {
+    margin-top: 40px;
+  }
+  
+  .duel-text {
+    bottom: 20px;
+  }
+  
+  .duel-text > h2,
+  .duel-text > span {
+    margin: 6px;
+  }
+  
+  .button-wrapper {
+    margin-top: 25px;
+  }
+  
+  .button-wrapper > button {
+    padding: 14px 20px;
+    font-size: 13px;
+  }
 }

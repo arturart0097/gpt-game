@@ -1,12 +1,15 @@
 .meetTeam_wrapper {
   height: 500px;
   text-align: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 .teams {
   display: flex;
   gap: 134px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .person {
@@ -15,6 +18,7 @@
 
 .person > img {
   width: 212px;
+  height: auto;
 }
 
 .person p:last-of-type {
@@ -30,4 +34,58 @@
 
 .person > p {
   margin-bottom: 0px;
+}
+
+/* Медіа-запити для мобільних пристроїв */
+@media (max-width: 1200px) {
+  .teams {
+    gap: 100px;
+  }
+  
+  .person > img {
+    width: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  .meetTeam_wrapper {
+    height: 450px;
+  }
+  
+  .teams {
+    gap: 80px;
+  }
+  
+  .person > img {
+    width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .meetTeam_wrapper {
+    height: auto;
+    padding: 60px 20px;
+  }
+  
+  .teams {
+    gap: 60px;
+  }
+  
+  .person > img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .meetTeam_wrapper {
+    padding: 40px 15px;
+  }
+  
+  .teams {
+    gap: 40px;
+  }
+  
+  .person > img {
+    width: 120px;
+  }
 }

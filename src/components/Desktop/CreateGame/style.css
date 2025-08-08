@@ -2,6 +2,8 @@
     padding: 40px 20px;
     text-align: center;
     color: #fff;
+    width: 100%;
+    max-width: 100%;
   }
   
   .createGame_wrapper h2 {
@@ -80,6 +82,144 @@
   .carouselSlide {
     width: 90%;
   }
-.swiper-custom {
+  
+  .swiper-custom {
     width: 80%;
+  }
+
+/* Медіа-запити для мобільних пристроїв */
+@media (max-width: 1200px) {
+  .swiper-custom {
+    width: 85%;
+  }
+  
+  .carouselSlide {
+    width: 85%;
+  }
+}
+
+@media (max-width: 992px) {
+  .createGame_wrapper {
+    padding: 30px 15px;
+  }
+  
+  .createGame_wrapper h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .generate-menu {
+    width: 50%;
+    padding: 10px 15px;
+    gap: 12px;
+  }
+  
+  .generate-menu input {
+    height: 45px;
+    padding: 0 10px;
+  }
+  
+  .generate-menu button {
+    height: 32px;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+  
+  .swiper-custom {
+    width: 90%;
+  }
+  
+  .carouselSlide {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .createGame_wrapper {
+    padding: 25px 10px;
+  }
+  
+  .createGame_wrapper h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  
+  .generate-menu {
+    width: 70%;
+    padding: 8px 12px;
+    gap: 10px;
+  }
+  
+  .generate-menu input {
+    height: 40px;
+    padding: 0 8px;
+  }
+  
+  .generate-menu button {
+    height: 28px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+  
+  .logo {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .avatar span {
+    font-size: 12px;
+  }
+  
+  .swiper-custom {
+    width: 95%;
+  }
+  
+  .carouselSlide {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .createGame_wrapper {
+    padding: 20px 8px;
+  }
+  
+  .createGame_wrapper h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .generate-menu {
+    width: 85%;
+    padding: 6px 10px;
+    gap: 8px;
+  }
+  
+  .generate-menu input {
+    height: 35px;
+    padding: 0 6px;
+  }
+  
+  .generate-menu button {
+    height: 25px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+  
+  .logo {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .avatar span {
+    font-size: 11px;
+  }
+  
+  .swiper-custom {
+    width: 100%;
+  }
+  
+  .carouselSlide {
+    width: 100%;
+  }
 }

@@ -1,12 +1,15 @@
 .integration-wrapper {
     height: 1099px;
     background-image: url("../../../assets/bg/scene1.png");
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 100%;
 }
 
 .integration-wrapper > h2 {
@@ -17,4 +20,30 @@
   .integration-wrapper > p {
     margin: 10px;
   }
+
+/* Медіа-запити для мобільних пристроїв */
+@media (max-width: 768px) {
+  .integration-wrapper {
+    height: 80vh;
+    min-height: 600px;
+  }
+  
+  .integration-wrapper > h2,
+  .integration-wrapper > p {
+    margin: 8px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .integration-wrapper {
+    height: 70vh;
+    min-height: 500px;
+  }
+  
+  .integration-wrapper > h2,
+  .integration-wrapper > p {
+    margin: 6px;
+  }
+}
   

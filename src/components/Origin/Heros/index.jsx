@@ -1,5 +1,5 @@
 import yasuImg from "@/assets/images/yasu.png";
-import Midori from "@/assets/images/midori.png";
+import Midori from "@/assets/images/midory.png";
 import jett from "@/assets/images/jett.png";
 import ss from "@/assets/images/ss.png";
 import lewis from "@/assets/images/lewis.png";

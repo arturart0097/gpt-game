@@ -1,16 +1,62 @@
 .trustedBy_wrapper {
     height: 800px;
     background-image: url("../../../assets/bg/trustedByBG.png");
-    background-size: 70%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
 }
 
 .icons_wrapper {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Медіа-запити для мобільних пристроїв */
+@media (max-width: 1200px) {
+  .trustedBy_wrapper {
+    height: 700px;
+  }
+  
+  .icons_wrapper {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .trustedBy_wrapper {
+    height: 600px;
+  }
+  
+  .icons_wrapper {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trustedBy_wrapper {
+    height: 500px;
+  }
+  
+  .icons_wrapper {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trustedBy_wrapper {
+    height: 400px;
+  }
+  
+  .icons_wrapper {
+    gap: 10px;
+  }
 }

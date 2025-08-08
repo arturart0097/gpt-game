@@ -1,0 +1,300 @@
+.test-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  padding: 12px 24px;
+  border: 2px solid #007bff;
+  background-color: white;
+  color: #9747ff;
+  font-family: Outfit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 28.8px */
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.tab-button:hover {
+  background-color: #e3f2fd;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.tab-button.active {
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.content-container {
+  margin-top: 30px;
+  background: rgba(26, 27, 31, 0.4);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #fbffff;
+  min-height: 300px;
+}
+
+.tab-content {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.tab-content h2 {
+  color: #9747ff;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.tab-content p {
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.tab-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tab-content li {
+  padding: 8px 0;
+  color: #fff;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Roadmap specific styles */
+.status-section {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 60px;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.status-item::before {
+  content: "";
+  position: absolute;
+  left: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+.status-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #9747ff;
+}
+
+.status-badge {
+  background-color: #10b981;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.roadmap-section {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 60px;
+}
+
+.roadmap-section h3 {
+  color: #9747ff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.roadmap-section h3::before {
+  content: "";
+  position: absolute;
+  left: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+.task-item::before {
+  content: "";
+  position: absolute;
+  left: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  z-index: 2;
+}
+
+.task-item strong {
+  color: white;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.task-item p {
+  color: #d1d5db;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.roadmap-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.roadmap-section li {
+  padding: 10px 0;
+  color: #d1d5db;
+  position: relative;
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.roadmap-section li:last-child {
+  border-bottom: none;
+}
+
+/* Special styling for the first accomplished task (Game builder) */
+.roadmap-section li:first-child::before {
+  content: "";
+  position: absolute;
+  left: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #10b981;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+/* Dark theme for GameGPT tab */
+.tab-content[data-tab="gamegpt"] {
+  background: rgba(26, 27, 31, 0.4);
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin: -30px;
+  position: relative;
+}
+
+/* Timeline styles */
+.tab-content[data-tab="gamegpt"]::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 80px;
+  bottom: 30px;
+  width: 2px;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.6) 0px,
+    rgba(255, 255, 255, 0.6) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  z-index: 1;
+}
+
+.tab-content[data-tab="gamegpt"] h2 {
+  color: #8b5cf6;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+}
+
+.tab-content[data-tab="gamegpt"] h2::before {
+  content: "";
+  position: absolute;
+  left: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #10b981;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+.tab-content[data-tab="gamegpt"] p {
+  color: #d1d5db;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+  }
+
+  .tab-button {
+    width: 100%;
+  }
+
+  .content-container {
+    padding: 20px;
+  }
+
+  .tab-content[data-tab="gamegpt"] {
+    margin: -20px;
+    padding: 20px;
+  }
+}

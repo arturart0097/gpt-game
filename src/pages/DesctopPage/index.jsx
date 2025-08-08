@@ -6,10 +6,11 @@ import { GamefiSlogan } from "@/components/Desktop/GamefiSlogan";
 import { GameIntegration } from "@/components/Desktop/GameIntegration";
 import { MeetTeam } from "@/components/Desktop/MeetTeam";
 import { TrustedBy } from "@/components/Desktop/TrustedBy";
+import "./style.css";
 
 const DesctopPage = () => {
   return (
-    <>
+    <div className="desktop-page-wrapper">
       <DesktopBunner />
       <GameIntegration />
       <GamefiSlogan />
@@ -17,7 +18,7 @@ const DesctopPage = () => {
       <TrustedBy />
       <MeetTeam />
       <CreateGame />
-    </>
+    </div>
   );
 };
 

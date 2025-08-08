@@ -1,0 +1,12 @@
+.desktop-page-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #000;
+}
+
+/* Забезпечуємо, що всі дочірні елементи також мають повну ширину */
+.desktop-page-wrapper > * {
+  width: 100%;
+  max-width: 100%;
+} 
