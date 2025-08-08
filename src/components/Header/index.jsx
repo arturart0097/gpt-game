@@ -7,7 +7,7 @@ import { socialLinks } from "@/entities/socialLinks";
 import { Link, useNavigate } from "react-router-dom";
 
 export const Header = () => {
-  const navidate = useNavigate()
+  const navidate = useNavigate();
 
   return (
     <header>
@@ -17,15 +17,13 @@ export const Header = () => {
       </div>
       <div className="header-menu">
         <ul>
-          <Link to={"/origin"}><li>DUEL Token</li></Link>
+          <Link to={"/origin"}>
+            <li>DUEL Token</li>
+          </Link>
           <li>Team</li>
+          <li>Docs</li>
           <li>Tokenomics</li>
-          <li>
-            NFT
-            <span>
-              <img src={New} alt="new" />
-            </span>
-          </li>
+          <li>Bridge</li>
         </ul>
         <ul>
           <SocialLinks links={socialLinks} />

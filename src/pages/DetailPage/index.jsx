@@ -87,15 +87,20 @@ function DetailPage() {
             <span dangerouslySetInnerHTML={{ __html: data.text }} />
           )}
           <br />
-          <hr />
           <br />
           <hr />
-          <br />
-          <hr />
-          <br />
-          <hr />
-          <br />
-          <hr />
+          {isFact && (
+            <>
+              <br />
+              <hr />
+              <br />
+              <hr />
+              <br />
+              <hr />
+              <br />
+              <hr />
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -6,8 +6,8 @@
   align-items: flex-start;
   gap: 12px;
   border-radius: 30px;
-  border: 1px solid #fbffff;
-  background: rgba(26, 27, 31, 0.4);
+  border: 1px solid #424242;
+  background: rgba(26, 27, 31, 0.40);
   position: relative;
   top: 0;
   left: 50%;
