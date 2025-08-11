@@ -1,50 +1,75 @@
-.integration-wrapper {
-    height: 1099px;
-    background-image: url("../../../assets/bg/scene1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    background-attachment: fixed;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 100%;
+/* style.css */
+.integration {
+  /* бекграунд */
+  height: 1000px;
+  --overlay: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.35));
+  background: var(--overlay), url("../../../assets/bg/scene1.png") center / cover no-repeat;
+
+  /* розміри/відступи */
+  width: 100%;
+  max-width: 100%;
+  padding: clamp(48px, 8vw, 96px) 16px;
+
+  /* центрування контенту */
+  display: grid;
+  place-items: center;
+  text-align: center;
 }
 
-.integration-wrapper > h2 {
-    margin-bottom: 20px;
-  }
-  
-  .integration-wrapper > h2,
-  .integration-wrapper > p {
-    margin: 10px;
-  }
+.integration__inner {
+  width: min(1100px, 100%);
+  display: grid;
+  gap: clamp(16px, 3vw, 32px);
+  justify-items: center;
+}
 
-/* Медіа-запити для мобільних пристроїв */
+/* Текст */
+.integration__kicker {
+  margin: 0;
+  font-size: clamp(14px, 2.4vw, 18px);
+  opacity: .9;
+}
+
+.integration__title {
+  margin: 0;
+  font-size: clamp(24px, 6vw, 48px);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+/* Сітка логотипів */
+.integration__logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: clamp(12px, 2.4vw, 24px);
+  width: 100%;
+}
+
+.integration__logo {
+  justify-self: center;
+  width: clamp(96px, 14vw, 160px);
+  height: auto;
+  aspect-ratio: 132 / 50; /* допомагає уникнути стрибків при lazy-load */
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.25));
+  transition: transform .2s ease-in-out;
+}
+
+.integration__logo:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Менші екрани */
 @media (max-width: 768px) {
-  .integration-wrapper {
-    height: 80vh;
-    min-height: 600px;
-  }
-  
-  .integration-wrapper > h2,
-  .integration-wrapper > p {
-    margin: 8px;
-    text-align: center;
+  .integration {
+    /* fixed-бекграунд часто лагає на iOS */
+    background-attachment: scroll;
   }
 }
 
-@media (max-width: 480px) {
-  .integration-wrapper {
-    height: 70vh;
-    min-height: 500px;
-  }
-  
-  .integration-wrapper > h2,
-  .integration-wrapper > p {
-    margin: 6px;
+/* Дуже вузькі екрани */
+@media (max-width: 420px) {
+  .integration__logos {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-  

@@ -1,208 +1,115 @@
+/* style.css — оновлено */
+
+/* Базовий контейнер */
 .duel-wrapper {
-  height: 1000px;
+  position: relative;
   width: 100%;
-  max-width: 100%;
-  position: relative;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: clamp(40px, 6vw, 80px) 16px clamp(32px, 5vw, 64px);
 }
 
-.duel-icon1 {
-  position: relative;
-  left: 15%;
-}
-
-.duel-icon2 {
-  position: absolute;
-  right: 15%;
-}
-
-.duel-icon3 {
-  position: relative;
-  top: 30vh;
-}
-
-.position-icon {
-  width: 100%;
-  position: relative;
-  top: 30vh;
-}
-
-.duel-icon4 {
-  position: absolute;
-  bottom: 30px;
-  right: 15%;
-}
-
+/* Декоративні іконки — шар позиціонування */
 .duel-title {
-  margin-top: 100px;
-}
-
-.duel-text {
   position: relative;
-  bottom: 60px;
+  display: grid;
+  justify-items: center;
+  gap: clamp(12px, 2.4vw, 20px);
+  margin-top: clamp(40px, 6vw, 100px);
+}
+
+/* Текст */
+.duel-text {
   text-align: center;
+  margin-top: clamp(8px, 2vw, 12px);
 }
-
 .duel-text > h2 {
-  margin-bottom: 20px;
+  margin: 0 0 10px;
+  font-size: clamp(22px, 5.6vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
-
-.duel-text > h2,
 .duel-text > span {
-  margin: 10px;
+  display: inline-block;
+  margin: 0;
+  font-size: clamp(14px, 2.2vw, 18px);
+  opacity: .9;
 }
 
+/* Пара скрінів (bet/win) — адаптивна сітка */
 .duel-bet-win {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: clamp(10px, 2vw, 16px);
   align-items: center;
-  gap: 10px;
+  justify-items: center;
+  margin-top: clamp(16px, 3vw, 28px);
+}
+.duel-bet-win img {
+  width: 100%;
+  height: auto;
+  max-width: 520px;
+  border-radius: 12px;
 }
 
+/* Кнопка */
 .button-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 50px;
+  margin-top: clamp(20px, 4vw, 50px);
 }
-
 .button-wrapper > button {
   display: inline-flex;
-  padding: 20px 30px;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
+  padding: clamp(12px, 2.2vw, 20px) clamp(18px, 3vw, 30px);
   border-radius: 30px;
   background: #fff;
   color: #000;
-  text-align: center;
-  font-family: Unbounded;
-  font-style: normal;
+  font-family: Unbounded, system-ui, sans-serif;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: -0.6px;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: clamp(14px, 1.6vw, 16px);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.button-wrapper > button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
 }
 
-/* Медіа-запити для мобільних пристроїв */
-@media (max-width: 1200px) {
-  .duel-wrapper {
-    height: 900px;
-  }
-  
-  .duel-icon1 {
-    left: 10%;
-  }
-  
-  .duel-icon2 {
-    right: 10%;
-  }
-  
-  .duel-icon4 {
-    right: 10%;
-  }
+/* ============ Декорації ============ */
+/* робимо їх абсолютними в межах .duel-title */
+.duel-icon1,
+.duel-icon2,
+.duel-icon3,
+.duel-icon4 {
+  position: absolute;
+  width: clamp(48px, 8vw, 96px);
+  height: auto;
+  pointer-events: none;
 }
 
-@media (max-width: 992px) {
-  .duel-wrapper {
-    height: 800px;
+/* Позиції з відсотками + легкі зсуви */
+.duel-icon1 { top: 0%; left: 12%; transform: translate(-20%, -30%); }
+.duel-icon2 { top: 0%; right: 12%; transform: translate(20%, -10%); }
+.duel-icon3 { top: 38%; left: 8%; transform: translate(-10%, -10%); }
+.duel-icon4 { bottom: -10%; right: 12%; transform: translate(20%, 0); }
+
+/* Мобільні налаштування позицій */
+@media (max-width: 900px) {
+  .duel-bet-win {
+    grid-template-columns: 1fr;
   }
-  
-  .duel-title {
-    margin-top: 80px;
-  }
-  
-  .duel-text {
-    bottom: 40px;
-  }
-  
-  .button-wrapper {
-    margin-top: 40px;
-  }
-  
-  .button-wrapper > button {
-    padding: 18px 26px;
-    font-size: 15px;
-  }
+  .duel-icon1 { left: 6%;  transform: translate(-10%, -20%); }
+  .duel-icon2 { right: 6%; transform: translate(10%, -10%); }
+  .duel-icon3 { top: 34%; left: 4%; }
+  .duel-icon4 { right: 6%; bottom: -6%; }
 }
 
-@media (max-width: 768px) {
-  .duel-wrapper {
-    height: 700px;
-  }
-  
-  .duel-icon1 {
-    left: 5%;
-  }
-  
-  .duel-icon2 {
-    right: 5%;
-  }
-  
-  .duel-icon4 {
-    right: 5%;
-  }
-  
-  .duel-title {
-    margin-top: 60px;
-  }
-  
-  .duel-text {
-    bottom: 30px;
-  }
-  
-  .duel-text > h2,
-  .duel-text > span {
-    margin: 8px;
-  }
-  
-  .button-wrapper {
-    margin-top: 30px;
-  }
-  
-  .button-wrapper > button {
-    padding: 16px 24px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .duel-wrapper {
-    height: 600px;
-  }
-  
-  .duel-icon1 {
-    left: 2%;
-  }
-  
-  .duel-icon2 {
-    right: 2%;
-  }
-  
-  .duel-icon4 {
-    right: 2%;
-  }
-  
-  .duel-title {
-    margin-top: 40px;
-  }
-  
-  .duel-text {
-    bottom: 20px;
-  }
-  
-  .duel-text > h2,
-  .duel-text > span {
-    margin: 6px;
-  }
-  
-  .button-wrapper {
-    margin-top: 25px;
-  }
-  
-  .button-wrapper > button {
-    padding: 14px 20px;
-    font-size: 13px;
-  }
+/* Дуже вузькі — зменшуємо декор, щоб не перекривав текст */
+@media (max-width: 520px) {
+  .duel-icon1,
+  .duel-icon2,
+  .duel-icon3,
+  .duel-icon4 { width: clamp(36px, 10vw, 56px); }
 }

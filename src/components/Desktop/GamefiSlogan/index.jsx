@@ -23,20 +23,22 @@ export const GamefiSlogan = () => {
           </p>
         </div>
       </div>
-      <div className="gamefiSlogan_content">
-        <div className="activePlayer activePlayer-text">
-          <h2>5,000</h2>
-          <span>active players</span>
-        </div>
-        <div className="registeredUsers">
-          <img
-            src={RegisterUserYears}
-            alt="years"
-            className="registeredUsers-years"
-          />
-          <div className="registeredUsers-text">
-            <h2>75,000</h2>
-            <span>registered users</span>
+      <div className="gameslogantest">
+        <div className="gamefiSlogan_content">
+          <div className="activePlayer activePlayer-text">
+            <h2>5,000</h2>
+            <span>active players</span>
+          </div>
+          <div className="registeredUsers">
+            <img
+              src={RegisterUserYears}
+              alt="years"
+              className="registeredUsers-years"
+            />
+            <div className="registeredUsers-text">
+              <h2>75,000</h2>
+              <span>registered users</span>
+            </div>
           </div>
         </div>
       </div>

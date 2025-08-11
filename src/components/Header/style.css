@@ -1,89 +1,230 @@
-header {
+/* style.css */
+.site-header {
   width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.header__bar {
   max-width: 100%;
+  margin: 0 auto;
+  padding: 10px 16px;
+  /* display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center; */
+
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  box-sizing: border-box;
+  gap: 12px;
 }
 
-header h1 {
-  color: #fff;
-  font-family: Syne;
-  font-size: 27.632px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: -1.658px;
-}
-
-.header-logo {
-  display: flex;
+.header__logo {
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
   user-select: none;
+  background: none;
+  border: 0;
+  padding: 6px 8px;
 }
 
-.header-menu {
+.header__brand {
+  color: #fff;
+  font-family: Syne, system-ui, sans-serif;
+  font-size: clamp(18px, 2.4vw, 28px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.qwerty {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
-.header-menu ul {
+/* Burger */
+.header__burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: 0;
+  padding: 8px;
+  gap: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.header__burger:hover { background: rgba(255,255,255,.06); }
+.header__burger:focus-visible { outline: 2px solid rgba(255,255,255,.35); outline-offset: 2px; }
+.header__burger span {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+  transform-origin: center;
+}
+/* animate to X when open via aria-expanded */
+.header__burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.header__burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.header__burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Nav */
+.header__nav {
+  display: contents; /* десктоп — елементи йдуть у грід-рядок */
+}
+
+/* Keep layout on desktop unchanged even with inner wrapper */
+.nav__inner {
+  display: contents;
+}
+
+.nav__list {
   display: flex;
   align-items: center;
   gap: 24px;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-self: end;
 }
 
-.header-menu ul li {
+.nav__link {
   color: #fff;
-  font-family: Unbounded;
+  font-family: Unbounded, system-ui, sans-serif;
   font-size: 16px;
-  font-style: normal;
   font-weight: 300;
-  line-height: normal;
+  text-decoration: none;
+  padding: 8px 6px;
+  border-radius: 10px;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+.nav__link:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.nav__link.active {
+  background: rgba(255, 255, 255, 0.12);
 }
 
-.header-menu span {
-  margin-left: 8px;
+.nav__social {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* Медіа-запити для мобільних пристроїв */
-@media (max-width: 768px) {
-  header {
-    padding: 0 15px;
+/* ====== Mobile ====== */
+.site-header {
+  position: relative; /* було не задано */
+  z-index: 1000; /* щоб лежати над контентом сторінки */
+}
+
+/* 2) Лінійка хедера */
+.header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* на випадок локальних z-index */
+}
+
+/* 3) Бургер завжди справа і поверх випадаючого меню */
+.header__burger {
+  margin-left: auto;
+  z-index: 1100; /* вище за .header__nav */
+}
+
+/* 4) Робимо бургер видимим на мобільному */
+@media (max-width: 900px) {
+  .header__burger {
+    display: inline-flex; /* важливо — інакше залишиться display:none */
   }
-  
-  header h1 {
-    font-size: 20px;
+
+  /* меню під шапкою, не перекриває бургер */
+  .header__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    /* розкривання вниз */
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.25s ease;
+    overflow: hidden;
+
+    /* коли закритий — жодних бордерів/фону/тіні */
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    z-index: 100; /* нижче за бургер */
   }
-  
-  .header-menu ul {
+  .header__nav.is-open {
+    grid-template-rows: 1fr;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.35);
+    border-top: 1px solid rgba(255,255,255,.08);
+  }
+
+  .nav__inner {
+    display: grid;
+    grid-auto-rows: min-content;
+    min-height: 0;
+    overflow: hidden;
+    padding: 10px 12px;
+    gap: 6px;
+  }
+
+  /* повністю прибираємо відступи у закритому стані, щоб не було "чорної лінії" */
+  .header__nav:not(.is-open) .nav__inner {
+    padding: 0;
+    gap: 0;
+  }
+
+  .nav__list,
+  .nav__social {
+    padding: 4px 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .nav__link {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 15px;
+  }
+
+  .nav__social {
+    justify-content: center;
     gap: 16px;
+    padding-top: 2px;
   }
-  
-  .header-menu ul li {
+}
+/* дрібні екрани */
+@media (max-width: 480px) {
+  .header__bar {
+    padding: 8px 12px;
+  }
+  .nav__link {
     font-size: 14px;
   }
 }
 
-@media (max-width: 480px) {
-  header {
-    padding: 0 10px;
-  }
-  
-  header h1 {
-    font-size: 18px;
-  }
-  
-  .header-menu ul {
-    gap: 12px;
-  }
-  
-  .header-menu ul li {
-    font-size: 12px;
-  }
+/* Тема/фон (опційно) */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+  z-index: -1;
 }
