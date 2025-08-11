@@ -1,8 +1,8 @@
 .meetTeam_wrapper {
-  height: 500px;
+  height: auto;
+  margin: 0 auto;
+  padding: clamp(40px, 8vw, 80px) 16px;
   text-align: center;
-  width: 100%;
-  max-width: 100%;
 }
 
 .teams {
@@ -87,5 +87,13 @@
   
   .person > img {
     width: 120px;
+  }
+}
+
+@media (max-width: 638px) {
+  .teams {
+    flex-direction: column;
+    align-items: center; /* центр по поперечній осі */
+    gap: 32px;           /* підбери як потрібно */
   }
 }

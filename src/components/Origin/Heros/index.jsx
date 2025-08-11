@@ -5,9 +5,17 @@ import "./style.css";
 
 export const Heros = () => {
   const groups = [
-    { values: code, textButton: "Learn More About The Code" },
-    { values: rebel, textButton: "Learn More About The Rebels" },
-    { values: guard, textButton: "Learn More About The Guard" },
+    { values: code, textButton: "Learn More About The Code", link: "/fact/13" },
+    {
+      values: rebel,
+      textButton: "Learn More About The Rebels",
+      link: "/fact/12",
+    },
+    {
+      values: guard,
+      textButton: "Learn More About The Guard",
+      link: "/fact/10",
+    },
   ];
 
   return (
@@ -20,7 +28,12 @@ export const Heros = () => {
 
       <div className="heros_list">
         {groups.map((g, i) => (
-          <SelectHero key={i} values={g.values} textButton={g.textButton} />
+          <SelectHero
+            key={i}
+            values={g.values}
+            textButton={g.textButton}
+            link={g.link}
+          />
         ))}
       </div>
     </section>

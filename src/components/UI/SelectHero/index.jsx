@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 
-export const SelectHero = ({ values = [], textButton }) => {
+export const SelectHero = ({ values = [], textButton, link }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="selectHero_wrapper">
       <div className="heros">
@@ -31,7 +33,7 @@ export const SelectHero = ({ values = [], textButton }) => {
           </Link>
         ))}
       </div>
-      <button>{textButton}</button>
+      <button onClick={() => navigate(link)}>{textButton}</button>
     </div>
   );
 };

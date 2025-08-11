@@ -85,18 +85,40 @@ footer {
   gap: 10px;
 }
 
-/* Медіа-запити для мобільних пристроїв */
 @media (max-width: 768px) {
   footer {
     padding: 60px 20px;
     flex-direction: column;
     gap: 40px;
-    align-items: center;
+    align-items: center; /* центр контейнерів */
+    text-align: center; /* центр тексту за замовчуванням */
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+  .footer-logo > h1 {
+    font-size: 28px;
+  }
+
+  .social_logo {
+    align-items: center; /* було flex-start */
+  }
+  .social_logo > span {
     text-align: center;
   }
 
-  .footer-logo > h1 {
-    font-size: 28px;
+  .crypto {
+    align-items: center; /* центр колонки */
+  }
+  .crypto div {
+    justify-content: center; /* центр кожного рядка з іконкою */
+  }
+
+  .footer-menu > ul {
+    align-items: center; /* центр елементів списку */
+    margin: 0; /* прибрати можливі зсуви */
+    padding: 0;
   }
 }
 
@@ -109,7 +131,6 @@ footer {
   .footer-logo > h1 {
     font-size: 24px;
   }
-
   .footer-menu > ul {
     font-size: 14px;
   }
