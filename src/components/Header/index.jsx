@@ -1,6 +1,6 @@
 // Header.tsx
 import { useState } from "react";
-import { Link, useNavigate, NavLink } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "@/assets/icons/logo.svg";
 import { SocialLinks } from "../UI/SocialLinks";
 import { socialLinks } from "@/entities/socialLinks";
@@ -46,33 +46,33 @@ export const Header = () => {
             <div className="nav__inner">
               <ul className="nav__list" role="list">
                 <li>
-                  <NavLink to="/origin" onClick={close} className="nav__link">
+                  <Link to="/origin" onClick={close} className="nav__link">
                     DUEL Token
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink to="/team" onClick={close} className="nav__link">
+                  <Link to="/team" onClick={close} className="nav__link">
                     Team
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink to="/docs" onClick={close} className="nav__link">
+                  <Link to="/docs" onClick={close} className="nav__link">
                     Docs
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink
+                  <Link
                     to="/tokenomics"
                     onClick={close}
                     className="nav__link"
                   >
                     Tokenomics
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink to="/bridge" onClick={close} className="nav__link">
+                  <Link to="/bridge" onClick={close} className="nav__link">
                     Bridge
-                  </NavLink>
+                  </Link>
                 </li>
               </ul>
 
