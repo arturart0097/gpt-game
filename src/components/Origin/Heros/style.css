@@ -22,3 +22,15 @@
   line-height: 24px;
   letter-spacing: -0.48px;
 }
+
+@media (max-width: 900px) {
+  .heros_wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .heros_wrapper p,
+  .heros_wrapper span {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

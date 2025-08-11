@@ -1,6 +1,6 @@
 .originModal {
   display: flex;
-  width: 890px;
+  max-width: 890px;
   padding: 48px;
   flex-direction: column;
   align-items: flex-start;
@@ -38,4 +38,10 @@
   font-weight: 600;
   line-height: 140%;
   letter-spacing: -0.6px;
+}
+
+@media (max-width: 900px) {
+  .originModal {
+    margin-right: 50px;
+  }
 }

@@ -28,7 +28,9 @@ function DetailPage() {
       <Header />
       <div className="content">
         <div className="image-content">
-          <img src={data.img} alt="icon" />
+          <img src={data.img} alt="icon" style={{
+            borderRadius: 30
+          }} />
           <div className="content-list">
             <div className="title">
               <img src={Content} />
