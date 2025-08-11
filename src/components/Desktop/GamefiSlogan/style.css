@@ -110,7 +110,7 @@
 }
 
 .registeredUsers-text {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 /* Медіа-запити для мобільних пристроїв */
@@ -118,13 +118,13 @@
   .gamefiSlogan_wrapper {
     margin-top: 120px;
   }
-  
+
   .activePlayer,
   .registeredUsers {
     width: 400px;
     height: 400px;
   }
-  
+
   .activePlayer > h2,
   .registeredUsers-text > h2 {
     font-size: 80px;
@@ -136,18 +136,18 @@
   .gamefiSlogan_wrapper {
     margin-top: 100px;
   }
-  
+
   .gamefiSlogan_content {
     height: 800px;
     gap: 15px;
   }
-  
+
   .activePlayer,
   .registeredUsers {
     width: 350px;
     height: 350px;
   }
-  
+
   .activePlayer > h2,
   .registeredUsers-text > h2 {
     font-size: 70px;
@@ -159,31 +159,32 @@
   .gamefiSlogan_wrapper {
     margin-top: 80px;
   }
-  
+
   .gamefiSlogan_content {
-    height: 600px;
+    height: auto; /* головне — більше не ріже */
+    overflow: visible; /* бейдж може виходити за межі картки */
+    margin-top: 20px; /* замість -/+ 100px */
     flex-direction: column;
     gap: 30px;
-    margin-top: 100px;
   }
-  
+  /* трохи піджимаємо бейдж, щоб точно вміщався */
+  .registeredUsers-years {
+    width: 140px;
+    height: auto;
+    top: -30px;
+    right: -30px;
+  }
+
   .activePlayer,
   .registeredUsers {
     width: 280px;
     height: 280px;
   }
-  
+
   .activePlayer > h2,
   .registeredUsers-text > h2 {
     font-size: 50px;
     letter-spacing: -1.5px;
-  }
-  
-  .registeredUsers-years {
-    width: 140px;
-    height: 135px;
-    top: -50px;
-    right: -50px;
   }
 }
 
@@ -191,24 +192,24 @@
   .gamefiSlogan_wrapper {
     margin-top: 60px;
   }
-  
+
   .gamefiSlogan_content {
     height: 400px;
     gap: 20px;
   }
-  
+
   .activePlayer,
   .registeredUsers {
     width: 220px;
     height: 220px;
   }
-  
+
   .activePlayer > h2,
   .registeredUsers-text > h2 {
     font-size: 40px;
     letter-spacing: -1.2px;
   }
-  
+
   .registeredUsers-years {
     width: 110px;
     height: 105px;
