@@ -1,13 +1,13 @@
-import yasuImg from "@/assets/images/yasu.png";
-import Midori from "@/assets/images/midory.png";
-import jett from "@/assets/images/jett.png";
-import ss from "@/assets/images/ss.png";
-import lewis from "@/assets/images/lewis.png";
-import tensor from "@/assets/images/tensor.png";
+import yasuImg from "@/assets/images/yasu2.png";
+import Midori from "@/assets/images/midory2.png";
+import jett from "@/assets/images/jett2.png";
+import ss from "@/assets/images/ss2.png";
+import lewis from "@/assets/images/vewis2.png";
+import tensor from "@/assets/images/tensor2.png";
 import defaultHeroImg from "@/assets/images/defaultHero.png";
-import nullHero from "@/assets/images/nullHero.png";
-import kat from "@/assets/images/kat.png";
-import estario from "@/assets/images/estrario.png";
+import nullHero from "@/assets/images/null2.png";
+import kat from "@/assets/images/kat2.png";
+import estario from "@/assets/images/estario2.png";
 
 export const code = [
   {
@@ -17,7 +17,7 @@ export const code = [
     name: "Yasu",
     text: `
       Yasu was born in the neon-lit underworld of Mars' cyberpunk city, a place of relentless hustle and technological marvels. 
-      Designated as a bounty hunter by the Code based on his aptitude, he quickly became known for his efficiency and skill. 
+      Designated as a bounty hunter by the Code  based on his aptitude, he quickly became known for his efficiency and skill. 
       During a mission on the desolate ruins of Earth, Yasu discovered a rusted katana amidst the rubble. Intrigued by the ancient weapon, 
       he took it back with him to Mars.
       <br /><br />

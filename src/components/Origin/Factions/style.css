@@ -27,6 +27,7 @@
   background: url("../../../assets/bg/factionsBG.png") center / cover no-repeat;
   text-align: center;
   padding: clamp(20px, 5vw, 36px) 0 clamp(24px, 6vw, 48px);
+  height: 550px;
 }
 .faction-content h2 {
   margin: 0 0 8px;
@@ -81,6 +82,13 @@
   aspect-ratio: 16 / 9;     /* опційно: задає єдине співвідношення */
   /* якщо не треба фіксованого співвідношення — видали рядок aspect-ratio */
 }
+
+@media (max-width: 485px) {
+  .faction-content {
+    height: 900px;
+  }
+}
+
 
 /* Трохи ущільнюємо на дуже вузьких */
 @media (max-width: 480px) {
