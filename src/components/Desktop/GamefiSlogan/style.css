@@ -163,7 +163,7 @@
   .gamefiSlogan_content {
     height: auto; /* головне — більше не ріже */
     overflow: visible; /* бейдж може виходити за межі картки */
-    margin-top: 20px; /* замість -/+ 100px */
+    margin-top: 40px; /* замість -/+ 100px */
     flex-direction: column;
     gap: 30px;
   }
