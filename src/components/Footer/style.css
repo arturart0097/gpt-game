@@ -5,6 +5,13 @@ footer {
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
+  background: transparent;
+  margin-top: 30px;
+}
+
+/* green variant when not on home */
+.footer--green {
+  background: #141414; /* pure green; adjust if you have a design token */
 }
 
 .footer-logo > h1 {

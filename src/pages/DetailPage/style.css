@@ -1,133 +1,157 @@
-.content {
-  display: flex;
-  padding: 30px;
-  align-items: flex-start;
-  gap: 30px;
-}
-
 .bg {
-  background-image: url("../../assets/bg/heroBg.png");
-  background-position: bottom;
-  background-size: 110%;
+  background-image: url("../../assets/bg/bg3.png");
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position-y: -150px;
+  background-position-x: center;
 }
 
+/* Контейнер контенту: 2 колонки на десктопі, стек на мобільних */
+.content {
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 30px);
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  gap: clamp(16px, 3vw, 40px);
+  align-items: start;
+}
+
+/* Ліва колонка: зображення + sticky TOC */
 .image-content {
-  width: 30%;
+  display: grid;
+  gap: clamp(12px, 2vw, 20px);
 }
-
 .image-content > img {
   width: 100%;
+  display: block;
+  border-radius: 30px;
 }
 
-.content-text {
-  width: 70%;
-}
-
-.content-text > h1 {
-  color: #fff;
-  font-family: Tachyon;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 48px; /* 120% */
-}
-
-.content h3 {
-  color: #fff;
-  font-family: Tachyon;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%; /* 24px */
-}
-
-.content-text span {
-  color: #fff;
-  font-family: Outfit;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 140%; /* 25.2px */
-  letter-spacing: -0.54px;
-  align-self: stretch;
+/* TOC-блок (раніше було width: 28vw) */
+.content-list {
+  position: sticky;
+  top: var(--sticky-top, 80px); /* підстав висоту хедера, якщо треба */
+  width: 100%;
+  border-radius: 30px;
+  border: 1px solid #fbffff;
+  background: #000;
+  box-shadow: 0 776px 217px 0 rgba(0, 0, 0, 0),
+    0 497px 199px 0 rgba(0, 0, 0, 0.01), 0 279px 168px 0 rgba(0, 0, 0, 0.05),
+    0 124px 124px 0 rgba(0, 0, 0, 0.09), 0 31px 68px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .title {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 0px 0px 35px;
+  padding: 16px 20px;
 }
 
-.content-list {
-  width: 28vw;
-  min-height: 465px;
-  border-radius: 40px;
-  border: 1px solid #fbffff;
-  background: #000;
-  box-shadow: 0 776px 217px 0 rgba(0, 0, 0, 0),
-    0 497px 199px 0 rgba(0, 0, 0, 0.01), 0 279px 168px 0 rgba(0, 0, 0, 0.05),
-    0 124px 124px 0 rgba(0, 0, 0, 0.09), 0 31px 68px 0 rgba(0, 0, 0, 0.1);
-}
-
+/* TOC список + вкладені елементи */
 .content-list ul {
-  list-style-type: none;
+  list-style: none;
+  margin: 0;
+  padding: 0 20px 20px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
   color: #fff;
   font-family: Outfit;
   font-size: 18px;
-  font-style: normal;
+  line-height: 1.2;
+}
+.content-list li > ul {
+  margin-top: 8px;
+  padding-left: 16px;
+  opacity: 0.9;
+}
+
+/* Права колонка */
+.content-text {
+  width: 100%; /* прибираємо 70% — керує grid */
+}
+.content-text > h1 {
+  color: #fff;
+  font-family: Tachyon;
+  font-size: clamp(24px, 5vw, 40px);
   font-weight: 400;
-  line-height: 120%; /* 21.6px */
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 18px;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+.content h3 {
+  color: #fff;
+  font-family: Tachyon;
+  font-size: clamp(16px, 2.4vw, 20px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 16px 0 8px;
+}
+.content-text span {
+  color: #fff;
+  font-family: Outfit;
+  font-size: clamp(15px, 2.1vw, 18px);
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: -0.54px;
 }
 
+/* Навігаційні кнопки з грідом */
 .nav-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
 }
-
 .button {
-  margin-top: 15px;
-  display: flex;
+  margin-top: 0;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
   cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 12px;
+  transition: background-color 0.15s ease;
+}
+.button:hover {
+  background: rgba(255, 255, 255, 0.06);
 }
 
-.button > span {
-  text-align: center;
-  font-family: Tachyon;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 48px; /* 300% */
-  text-transform: capitalize;
-  background: var(
-    --gradient,
-    linear-gradient(60deg, #f094fa 13.4%, #f5576e 86.6%)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  user-select: none;
-}
-
+/* Підсвітка першого пункту TOC як і було */
 .select {
   font-family: Outfit;
   font-size: 18px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 120%; /* 21.6px */
-  background: var(
-    --Gradient-Prism,
-    linear-gradient(60deg, #f094fa 13.4%, #f5576e 86.6%)
-  );
-  background-clip: text;
+  line-height: 1.2;
+  background: linear-gradient(60deg, #f094fa 13.4%, #f5576e 86.6%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* ——— Адаптив ——— */
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  .content-list {
+    position: static;
+  } /* вимикаємо sticky на вузьких */
+}
+
+@media (max-width: 600px) {
+  .bg {
+    background-image: url("../../assets/bg/bgMob.png");
+    background-position: bottom;
+    background-size: 150%;
+  }
+
+  .title {
+    padding: 12px 16px;
+  }
+  .content-list ul {
+    padding: 0 16px 16px 28px;
+    gap: 12px;
+  }
 }

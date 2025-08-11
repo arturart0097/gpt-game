@@ -4,12 +4,16 @@ import Eth from "@/assets/icons/eth.svg";
 
 import { SocialLinks } from "../UI/SocialLinks";
 import { socialLinks } from "@/entities/socialLinks";
+import { useLocation } from "react-router-dom";
 
 import "./style.css";
 
 export const Footer = () => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
-    <footer>
+    <footer className={isHome ? "" : "footer--green"}>
       <div className="social_logo">
         <div className="footer-logo">
           <img src={Logo} alt="logo" />

@@ -2,7 +2,12 @@
 .origin-wrapper {
   position: relative;
   isolation: isolate;
-  background: url("../../../assets/bg/originbannerBG.png") center / cover no-repeat;
+  /* Шари: верхня/нижня віньєтка + м'яке затемнення + зображення */
+  background:
+    radial-gradient(120% 80% at 50% -20%, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0) 60%),
+    radial-gradient(120% 80% at 50% 120%, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0) 60%),
+    radial-gradient(200% 140% at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.85) 100%),
+    url("../../../assets/bg/originbannerBG.png") center / cover no-repeat;
   min-height: clamp(480px, 70vh, 820px);
   width: 100%;
   background-attachment: fixed;
@@ -54,6 +59,5 @@
   .origin-wrapper {
     background-attachment: fixed;
     background-position: 50% 40%;
-
   }
 }
