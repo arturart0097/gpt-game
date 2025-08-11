@@ -56,7 +56,8 @@
 
 @media (max-width: 900px) {
   .origin-wrapper {
-    background-attachment: fixed;
+    background-attachment: scroll; /* ключове */
     background-position: 50% 40%;
+    background-repeat: no-repeat;
   }
 }
