@@ -9,7 +9,14 @@ export const SelectHero = ({ values = [], textButton }) => {
           <Link
             to={`/detail/${hero.id}`}
             className="hero-link"
-            state={{ name: hero.name, type: hero.type, img: hero.img, text: hero.text, color: hero.color, contents: hero.contents }}
+            state={{
+              name: hero.name,
+              type: hero.type,
+              img: hero.img,
+              text: hero.text,
+              color: hero.color,
+              contents: hero.contents,
+            }}
             key={hero.id}
           >
             <div
@@ -18,7 +25,8 @@ export const SelectHero = ({ values = [], textButton }) => {
               }}
               className="hero"
             >
-              {/* text */}
+              <span className="hero-type">{hero.type}</span>
+              <p className="hero-name">{hero.name}</p>
             </div>
           </Link>
         ))}

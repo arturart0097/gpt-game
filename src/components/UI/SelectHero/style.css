@@ -18,7 +18,7 @@
   background: #fff;
   color: #000;
   text-align: center;
-  font-family: Unbounded;
+  font-family: Unbounded, Arial, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -32,21 +32,80 @@
   align-items: center;
   width: 100%;
   height: 400px;
-  gap: 25px;
 }
 
 .hero {
-  width: 435px;
+  width: 437px;
   height: 410px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 10px;
-  border-radius: 16px; /* опціонально, для краси */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* опціонально */
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 30px;
 }
 
 .hero-link {
   display: block;
   width: 25%;
+}
+
+/* Найбільш специфічні селектори для перевизначення глобальних стилів */
+.selectHero_wrapper .heros .hero-link .hero span.hero-type {
+  color: #fff !important;
+  font-family: Unbounded, Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 100% !important;
+  opacity: 0.8 !important;
+  margin-bottom: 8px !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+  z-index: 10 !important;
+  position: relative !important;
+  letter-spacing: normal !important;
+}
+
+.selectHero_wrapper .heros .hero-link .hero p.hero-name {
+  color: #fff !important;
+  font-family: Tachyon, Arial, sans-serif !important;
+  font-size: 20px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 24px !important;
+  margin: 0 !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+  z-index: 10 !important;
+  position: relative !important;
+  letter-spacing: normal !important;
+}
+
+/* Альтернативні селектори з атрибутами */
+.selectHero_wrapper span[class*="hero-type"] {
+  color: #fff !important;
+  font-family: Tachyon, Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 100% !important;
+  opacity: 0.8 !important;
+  margin-bottom: 8px !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+  z-index: 10 !important;
+  position: relative !important;
+  letter-spacing: normal !important;
+}
+
+.selectHero_wrapper p[class*="hero-name"] {
+  color: #fff !important;
+  font-family: Tachyon !important;
+  font-size: 20px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
 }

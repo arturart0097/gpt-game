@@ -5,6 +5,7 @@
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
+    background-attachment: fixed;
     flex-direction: column;
     justify-content: center;
     align-items: center;
