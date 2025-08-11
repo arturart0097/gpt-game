@@ -90,7 +90,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  justify-self: end;
+  justify-self: center;
 }
 
 .nav__link {

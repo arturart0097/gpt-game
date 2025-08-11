@@ -23,7 +23,7 @@
   color: #fff;
   text-align: center;
   font-family: Unbounded;
-  font-size: 20px;
+  font-size: clamp(14px, 2.6vw, 20px);
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 28px */
@@ -33,7 +33,7 @@
 .originModal span {
   color: var(--CTA, #ba83ff);
   font-family: Unbounded;
-  font-size: 20px;
+  font-size: clamp(14px, 2.6vw, 20px);
   font-style: normal;
   font-weight: 600;
   line-height: 140%;
@@ -45,3 +45,10 @@
     margin-right: 50px;
   }
 }
+
+/* 
+@media (max-width: 500px) {
+  .originModal {
+    margin-top: 100px;
+  }
+} */

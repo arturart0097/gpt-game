@@ -94,7 +94,7 @@ footer {
     align-items: center;
     text-align: center;
   }
-  
+
   .footer-logo > h1 {
     font-size: 28px;
   }
@@ -105,11 +105,11 @@ footer {
     padding: 40px 15px;
     gap: 30px;
   }
-  
+
   .footer-logo > h1 {
     font-size: 24px;
   }
-  
+
   .footer-menu > ul {
     font-size: 14px;
   }

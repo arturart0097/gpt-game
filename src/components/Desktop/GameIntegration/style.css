@@ -14,6 +14,7 @@
   display: grid;
   place-items: center;
   text-align: center;
+  background-attachment: fixed;
 }
 
 .integration__inner {
