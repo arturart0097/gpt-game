@@ -51,6 +51,7 @@
 @media (max-width: 768px) {
   .trustedBy_wrapper {
     height: 500px;
+    text-align: center;
   }
   
   .icons_wrapper {
