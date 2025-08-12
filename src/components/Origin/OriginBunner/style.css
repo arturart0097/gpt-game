@@ -112,6 +112,6 @@
       no-repeat;
     min-height: clamp(480px, 70vh, 820px);
     width: 100%;
-    background-attachment: fixed;
+    background-attachment: scroll;
   }
 }
