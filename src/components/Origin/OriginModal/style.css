@@ -11,7 +11,7 @@
   position: relative;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -15%);
+  transform: translate(-50%, -35%);
 
   /* Modal Shadow */
   box-shadow: 0 128px 36px 0 rgba(0, 0, 0, 0), 0 82px 33px 0 rgba(0, 0, 0, 0.01),

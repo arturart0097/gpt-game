@@ -1,14 +1,58 @@
 /* style.css — без зміни шрифтів */
+/* style.css — без зміни шрифтів */
 .origin-wrapper {
   position: relative;
   isolation: isolate;
   /* Шари: верхня/нижня віньєтка + м'яке затемнення + зображення */
-  background: url("../../../assets/bg/originbannerBG.png") center / cover
-    no-repeat;
+  background: url("../../../assets/bg/originbannerBG.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: clamp(480px, 70vh, 820px);
   width: 100%;
   background-attachment: fixed;
 }
+
+.origin-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: clamp(160px, 0vh, 340px); /* висота “завалу” */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.98) 0%,
+    rgba(0, 0, 0, 0.95) 35%,
+    rgba(0, 0, 0, 0.75) 55%,
+    rgba(0, 0, 0, 0.3) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* м’яка тінь ПІД блоком, як «провал» за межами */
+.origin-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -18px;
+  height: 16px;
+  background: rgba(0, 0, 0, 0.85);
+  filter: blur(14px);
+  -webkit-filter: blur(14px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* щоб контент був над затемненням */
+.origin-text {
+  position: relative;
+  z-index: 1;
+}
+
 
 .origin-text {
   position: relative;
@@ -59,5 +103,15 @@
     background-attachment: scroll; /* ключове */
     background-position: 50% 40%;
     background-repeat: no-repeat;
+  }
+  .origin-wrapper {
+    position: relative;
+    isolation: isolate;
+    /* Шари: верхня/нижня віньєтка + м'яке затемнення + зображення */
+    background: url("../../../assets/bg/originbannerBG.png") center / cover
+      no-repeat;
+    min-height: clamp(480px, 70vh, 820px);
+    width: 100%;
+    background-attachment: fixed;
   }
 }
